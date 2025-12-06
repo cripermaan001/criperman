@@ -26,11 +26,25 @@
     padding: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   }
+  .word2{
+    position:absolute;
+    top:900px;
+    transform:translate(-50%, -50%);
+    display:flex;
+    gap:4px;
+    opacity:0;
+    transition: opacity 0.6s;
+  }
   .yt svg{display:block;width:100%;height:100%}
   span {
     font-size: 44px;
     letter-spacing: 1px;
     display: inline-block;
+  }
+  /* 3 va 4-oyna uchun oq matn */
+  .wrap:nth-of-type(3) .word span,
+  .wrap:nth-of-type(4) .word span {
+    color: #fff;
   }
 
 </style>
@@ -38,138 +52,202 @@
 <body>
 <div class="wrap">
   <canvas id="rain"></canvas>
-
-  <div class="brand" id="brand">
+  <div class="brand">
     <div class="yt" aria-hidden="true">
-      <!-- simple play icon svg like YouTube -->
       <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M5 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H5zm8 7.5L9.5 17V7l3.5 3.5z"/>
       </svg>
     </div>
-
-    <div class="label" id="label">
-      <!-- Break into spans; mark letters to KEEP with class 'keep' (C M N) -->
+    <div class="label">
       <div class="word">
         <span>C</span>
-        <span >R</span>
-        <span >I</span>
-        <span >P</span>
-        <span >E</span>
-        <span >R</span>
-        <span >M</span>
-        <span >A</span>
-        <span >N</span>
+        <span>R</span>
+        <span>I</span>
+        <span>P</span>
+        <span>E</span>
+        <span>R</span>
+        <span>M</span>
+        <span>A</span>
+        <span>N</span>
         <span> </span>
-        <span> </span>
-        <span> </span>
+        <span>            </span>
         <span>P</span>
         <span>R</span>
         <span>O</span>
         <span> </span>
-        <span> </span>
-        <span> </span>
+        <span>            </span>
         <span>U</span>
-        <span >Z</span>
+        <span>Z</span>
+      </div>
     </div>
   </div>
-
-
+</div>
+<div class="wrap">
+  <canvas id="rain"></canvas>
+  <div class="brand">
+    <div class="yt" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H5zm8 7.5L9.5 17V7l3.5 3.5z"/>
+      </svg>
+    </div>
+    <div class="label">
+      <div class="word">
+        <span>C</span>
+        <span>R</span>
+        <span>I</span>
+        <span>P</span>
+        <span>E</span>
+        <span>R</span>
+        <span>M</span>
+        <span>A</span>
+        <span>N</span>
+        <span> </span>
+        <span>            </span>
+        <span>G</span>
+        <span>A</span>
+        <span>M</span>
+        <span>E</span>
+        <span>R</span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Pastga nusxa -->
+<div class="wrap">
+  <canvas id="rain"></canvas>
+  <div class="brand">
+    <div class="yt" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H5zm8 7.5L9.5 17V7l3.5 3.5z"/>
+      </svg>
+    </div>
+    <div class="label">
+      <div class="word">
+        <span>C</span>
+        <span>R</span>
+        <span>I</span>
+        <span>P</span>
+        <span>E</span>
+        <span>R</span>
+        <span>M</span>
+        <span>A</span>
+        <span>N</span>
+        <span> </span>
+        <span>            </span>
+        <span>P</span>
+        <span>R</span>
+        <span>O</span>
+        <span> </span>
+        <span>            </span>
+        <span>U</span>
+        <span>Z</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap">
+  <canvas id="rain"></canvas>
+  <div class="brand">
+    <div class="yt" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M5 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H5zm8 7.5L9.5 17V7l3.5 3.5z"/>
+      </svg>
+    </div>
+    <div class="label">
+      <div class="word">
+        <span>C</span>
+        <span>R</span>
+        <span>I</span>
+        <span>P</span>
+        <span>E</span>
+        <span>R</span>
+        <span>M</span>
+        <span>A</span>
+        <span>N</span>
+        <span> </span>
+        <span>            </span>
+        <span>G</span>
+        <span>A</span>
+        <span>M</span>
+        <span>E</span>
+        <span>R</span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
-/* Text shrink/expand cycle */
-const brand = document.getElementById('brand');
-const label = document.getElementById('label');
+// Har bir .wrap ichidagi canvas uchun rain effektini alohida ishga tushiramiz
+document.querySelectorAll('.wrap').forEach((wrap, idx) => {
+  const canvas = wrap.querySelector('canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, fontSize = 14, columns, drops;
 
-let cycleInterval = 3500;
-function cycle(){
-  // shrink
-  brand.classList.add('shrink');
-  // after shrink pause, expand
-  setTimeout(()=>{
-    brand.classList.remove('shrink');
-    // pulse effect
-    label.classList.add('pulse');
-    setTimeout(()=> label.classList.remove('pulse'), 700);
-  }, 1200);
-}
-// start cycles every 3.5s but offset initial to show full first
-setTimeout(()=>{ cycle(); setInterval(cycle, cycleInterval); }, 1200);
+  function resize(){
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+    fontSize = Math.max(12, Math.floor(Math.min(W,H) / 72));
+    columns = Math.floor(W / fontSize);
+    drops = new Array(columns).fill(H + Math.random()*1000);
+    ctx.font = fontSize + 'px monospace';
+  }
+  window.addEventListener('resize', resize);
+  resize();
 
-/* Matrix-like rain (bark) on canvas, triggered occasionally */
-const canvas = document.getElementById('rain');
-const ctx = canvas.getContext('2d');
-let W, H, fontSize = 14, columns, drops;
+  const randomChars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()-_=+[]{}|;:",.<>?/\\\'`~';
+  // 1 va 2-oyna random, 3 va 4-oyna faqat *
+  const isStarRain = (idx >= 2); // 3 va 4-oyna
+  const chars = isStarRain ? '*' : randomChars;
 
-function resize(){
-  W = canvas.width = innerWidth;
-  H = canvas.height = innerHeight;
-  fontSize = Math.max(12, Math.floor(Math.min(W,H) / 72));
-  columns = Math.floor(W / fontSize);
-  drops = new Array(columns).fill(H + Math.random()*1000);
-}
-addEventListener('resize', resize);
-resize();
-
-const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZабвгдежзийклмнопрстуфхцчшщъыьэюя';
-ctx.font = fontSize + 'px monospace';
-
-function drawFrame(){
-  // fade background lightly to create trailing effect
-  ctx.fillStyle = 'rgba(0,0,0,0.12)';
-  ctx.fillRect(0,0,W,H);
-
-  for(let i=0;i<columns;i++){
-    if(Math.random() > 0.975) {
-      // sometimes start a new drop higher
-      drops[i] = Math.random()*-200;
+  function drawFrame(){
+    ctx.fillStyle = 'rgba(0,0,0,0.12)';
+    ctx.fillRect(0,0,W,H);
+    for(let i=0;i<columns;i++){
+      if(Math.random() > 0.975) {
+        drops[i] = Math.random()*-200;
+      }
+      const text = chars.charAt(Math.floor(Math.random()*chars.length));
+      ctx.fillStyle = isStarRain ? '#fff' : ((Math.random() < 0.06) ? '#bfffbf' : 'rgba(0,255,120,0.9)');
+      ctx.fillText(text, i*fontSize, drops[i]);
+      drops[i] += fontSize + Math.random()*fontSize*0.65;
+      if(drops[i] > H + 100) drops[i] = Math.random()*-50;
     }
-    const text = chars.charAt(Math.floor(Math.random()*chars.length));
-    // brighter leading char
-    ctx.fillStyle = (Math.random() < 0.06) ? '#bfffbf' : 'rgba(0,255,120,0.9)';
-    ctx.fillText(text, i*fontSize, drops[i]);
-    drops[i] += fontSize + Math.random()*fontSize*0.65;
-    if(drops[i] > H + 100) drops[i] = Math.random()*-50;
+    requestAnimationFrame(drawFrame);
   }
   requestAnimationFrame(drawFrame);
-}
-requestAnimationFrame(drawFrame);
 
-/* Occasional heavy 'bark' burst from top (visible columns) */
-function burst(){
-  // create quick bright vertical streaks for short time
-  const burstCols = Math.floor(Math.random()*8) + 6;
-  const chosen = new Set();
-  while(chosen.size < burstCols){
-    chosen.add(Math.floor(Math.random()*columns));
+  function burst(){
+    const burstCols = Math.floor(Math.random()*8) + 6;
+    const chosen = new Set();
+    while(chosen.size < burstCols){
+      chosen.add(Math.floor(Math.random()*columns));
+    }
+    let steps = 12;
+    const interval = setInterval(()=>{
+      ctx.fillStyle = 'rgba(0,0,0,0.08)';
+      ctx.fillRect(0,0,W,H);
+      chosen.forEach(i=>{
+        for(let y=0;y<H;y+=fontSize*1.8){
+          const text = chars.charAt(Math.floor(Math.random()*chars.length));
+          ctx.fillStyle = isStarRain ? '#fff' : '#aaffb8';
+          ctx.fillText(text, i*fontSize, y + (Math.random()*fontSize*0.6));
+        }
+      });
+      steps--;
+      if(steps<=0) clearInterval(interval);
+    }, 60);
   }
-  // animate bright streaks by drawing a few frames manually
-  let steps = 12;
-  const interval = setInterval(()=>{
-    ctx.fillStyle = 'rgba(0,0,0,0.08)';
-    ctx.fillRect(0,0,W,H);
-    chosen.forEach(i=>{
-      for(let y=0;y<H;y+=fontSize*1.8){
-        const text = chars.charAt(Math.floor(Math.random()*chars.length));
-        ctx.fillStyle = '#aaffb8';
-        ctx.fillText(text, i*fontSize, y + (Math.random()*fontSize*0.6));
-      }
-    });
-    steps--;
-    if(steps<=0) clearInterval(interval);
-  }, 60);
-}
-// random bursts every 4-12s
-setInterval(()=>{ if(Math.random() < 0.8) burst(); }, 4000 + Math.random()*8000);
+  setInterval(()=>{ if(Math.random() < 0.8) burst(); }, 4000 + Math.random()*8000);
 
-/* Accessibility: pause animation on reduced-motion */
-const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-if (mq.matches) {
-  // stop canvas updates
-  ctx.clearRect(0,0,W,H);
-  cancelAnimationFrame(drawFrame);
-  brand.classList.remove('shrink');
-}
+  // Accessibility: pause animation on reduced-motion
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (mq.matches) {
+    ctx.clearRect(0,0,W,H);
+    // Animationlarni to'xtatish uchun requestAnimationFrame ni bekor qilish kerak
+    // Bu kod faqat accessibility uchun
+  }
+});
+</script>
 </script>
 </body>
 </html>
