@@ -1,81 +1,216 @@
-<!doctype html>
-<html lang="uz">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Criperman Gamer — 4-sahifa</title>
-  <style>
-    :root{--bg:#0dff00;--green:#00ff5c;--dim:#0b3a12}
-    html,body{height:100%;margin:0;background:green;font-family:Inter,ui-sans-serif,system-ui,monospace;color:var(--green)}
-    .wrap{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:none}
-    canvas#rain{position:absolute;left:0;top:0;width:100%;height:100%;z-index:0;pointer-events:none}
-    .brand{position:relative;z-index:3;display:flex;align-items:center;gap:2px}
-    .yt{width:64px;height:64px;flex:0 0 64px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#ff0000,#ff0000);border-radius:12px;padding:8px;box-shadow:0 4px 12px rgb(255, 0, 0)}
-    .yt svg{display:block;width:100%;height:100%}
-    span{font-size:44px;letter-spacing:1px;display:inline-block;color:#fff;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criperman</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#050505;
+    color:#00ffff;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:#111;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    border-bottom:2px solid #00ffff;
+}
+
+nav a{
+    color:#00ffff;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    text-shadow:0 0 15px #00ffff;
+}
+
+section{
+    padding:60px 20px;
+}
+
+h1,h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #00ffff;
+    border-radius:15px;
+    padding:20px;
+    margin:15px;
+    box-shadow:0 0 15px #00ffff44;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.channel{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.channel:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00ffff;
+}
+
+.video{
+    margin-top:10px;
+    display:none;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid #00ffff;
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <canvas id="rain"></canvas>
-    <div class="brand">
-      <div class="yt" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M5 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H5zm8 7.5L9.5 17V7l3.5 3.5z"/>
-        </svg>
-      </div>
-      <div class="label">
-        <div class="word">
-          <span>C</span>
-          <span>R</span>
-          <span>I</span>
-          <span>P</span>
-          <span>E</span>
-          <span>R</span>
-          <span>M</span>
-          <span>A</span>
-          <span>N</span>
-          <span> </span>
-          <span> </span>
-          <span> </span>
-          <span>A</span>
-          <span>I</span>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#channels">Channels</a>
+    <a href="#crazy">Crazy Sites</a>
+    <a href="#about">About Me</a>
+</nav>
+
+<section id="home">
+    <h1>CRIPERMAN PRO UZ</h1>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🔥 Most Viewed Video</h3>
+            <p>Top video shu yerda chiqadi.</p>
         </div>
-      </div>
+
+        <div class="card">
+            <h3>🆕 Latest Video</h3>
+            <p>Eng yangi video shu yerda chiqadi.</p>
+        </div>
     </div>
-  </div>
-  <script>
-    // Rain effect: only '*' chars, white color
-    const canvas = document.getElementById('rain');
-    const ctx = canvas.getContext('2d');
-    let W, H, fontSize = 14, columns, drops;
-    function resize(){
-      W = canvas.width = window.innerWidth;
-      H = canvas.height = window.innerHeight;
-      fontSize = Math.max(60, Math.floor(Math.min(W,H) / 660));
-      columns = Math.floor(W / fontSize);
-      drops = new Array(columns).fill(H + Math.random()*1000);
-      ctx.font = fontSize + 'px monospace';
+</section>
+
+<section id="channels">
+    <h2>📺 Channels</h2>
+
+    <div class="grid">
+
+        <div class="card channel" onclick="toggleVideos('gaming')">
+            <h3>Criperman Gaming</h3>
+
+            <div id="gaming" class="video">
+                <p>🎮 Minecraft Video</p>
+                <p>🎮 GTA Video</p>
+                <p>🎮 Roblox Video</p>
+            </div>
+        </div>
+
+        <div class="card channel" onclick="toggleVideos('minecraft')">
+            <h3>Crimson Criperman</h3>
+
+            <div id="shorts" class="video">
+                <p>⚡ Short 1</p>
+                <p>⚡ Short 2</p>
+                <p>⚡ Short 3</p>
+            </div>
+        </div>
+
+        <div class="card channel" onclick="toggleVideos('minecraft')">
+            <h3>Criperman AI</h3>
+
+            <div id="shorts" class="video">
+                <p>⚡ Short 1</p>
+                <p>⚡ Short 2</p>
+                <p>⚡ Short 3</p>
+            </div>
+        </div>
+              <div class="card channel" onclick="toggleVideos('minecraft')">
+            <h3>zitunper</h3>
+
+            <div id="shorts" class="video">
+                <p>⚡ Short 1</p>
+                <p>⚡ Short 2</p>
+                <p>⚡ Short 3</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="crazy">
+    <h2>🤪 Crazy Sites</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Crazy Games</h3>
+            <a href="#">Visit</a>
+        </div>
+
+        <div class="card">
+            <h3>Crazy Tools</h3>
+            <a href="#">Visit</a>
+        </div>
+
+        <div class="card">
+            <h3>Crazy AI</h3>
+            <a href="#">Visit</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>👤 About Criperman</h2>
+
+    <div class="card">
+        <p><b>Name:</b> Criperman</p>
+        <p><b>Country:</b> Uzbekistan</p>
+        <p><b>Hobby:</b> Coding, YouTube, Websites, anime ko'ring, o'yinlar o'ynash, musiqa eshitish</p>
+        <p><b>like:</b> minecraft, roblox, blood strike, girl, anime ko'ring, eng yoqan animelar death note, fumetso no anata e, monster, your name va boshqalar musiqa: anime saauntek yani anime boshida chiqadigan musiqalar va ozim yaratgan musiqalar va h.k.</p>
+        <p><b>tugilganman:</b>7.1.2011 yani 7-yanvar</p>
+        <br>
+        <p>
+            Salom! Men Criperman. Men saytlar yarataman,
+            videolar tayyorlayman va yangi loyihalar ustida ishlayman.
+          men urushishni yoqtermayman va gaylarni ham men yapon tili ingiliz va turk tillarini yaxshi ko'raman
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Criperman
+</footer>
+
+<script>
+function toggleVideos(id){
+    let el=document.getElementById(id);
+
+    if(el.style.display==="block"){
+        el.style.display="none";
+    }else{
+        el.style.display="block";
     }
-    window.addEventListener('resize', resize);
-    resize();
-    const chars = '*';
-    function drawFrame(){
-      ctx.fillStyle = 'rgba(0,128,0,0.12)';
-      ctx.fillRect(0,0,W,H);
-      for(let i=0;i<columns;i++){
-        if(Math.random() > 0.975) {
-          drops[i] = Math.random()*-200;
-        }
-        const text = chars;
-        ctx.fillStyle = '#fff';
-        ctx.fillText(text, i*fontSize, drops[i]);
-        drops[i] += fontSize * 0.1 + Math.random()*fontSize*0.1;
-        if(drops[i] > H + 100) drops[i] = Math.random()*-50;
-      }
-      requestAnimationFrame(drawFrame);
-    }
-    requestAnimationFrame(drawFrame);
-  </script>
+}
+</script>
+
 </body>
 </html>
